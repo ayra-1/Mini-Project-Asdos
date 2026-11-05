@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int JumlahMenu = 0;
+int JumlahMenu = 16;
 
 void tampilkanMenu(string nama[], int harga[]) {
 
@@ -31,7 +31,7 @@ void bubbleSort(string nama[], int harga[]) {
             }
         }
     }
-}
+} 
 
 void cariMenu(string nama [], int harga[]) {
     
@@ -50,7 +50,7 @@ void cariMenu(string nama [], int harga[]) {
 
         cout << "\n=== MENU SESUAI ANGGARAN ===\n";
 
-        for (int i = 0; i < jumlahMenu; i++) {
+        for (int i = 0; i < JumlahMenu; i++) {
             if (harga[i] <= anggaran) {
 
                 cout << nama[i];
@@ -65,3 +65,43 @@ void cariMenu(string nama [], int harga[]) {
         }
     }
 }
+
+int main () {
+
+    string nama[16] = {}
+    "Ayam Geprek",
+    "Mie ayam",
+    "Martabak Manis",
+    "Nasi Bakar",
+    "Nasi Goreng",
+    "Ketoprak",
+    "Soto",
+    "Sate Ayam",
+    "Roti Bakar",
+    "Batagor",
+    "Bubur Kacang Ijo",
+    "Nasi Uduk",
+    "Bubur Ayam",
+    "Susu",
+    "Buah",
+    "Nasi Bakar"
+};
+
+int harga[16] = {
+    10000,
+    10000,
+    40000,
+    10000,
+    12000,
+    15000,
+    13000,
+    8000,
+    19000,
+    6000,
+    5000,
+    7000,
+    10000,
+    7000,
+    10000,
+    11000,
+};
