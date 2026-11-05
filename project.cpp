@@ -13,7 +13,7 @@ void tampilkanMenu(string nama[], int harga[]) {
         cout << i + 1 << ". " << nama[i];
         cout << " - Rp " << harga[i] << endl;
     }
-}
+}  
 
 void bubbleSort(string nama[], int harga[]) {
     for (int i = 0; i < JumlahMenu; i++) {
@@ -50,7 +50,7 @@ void cariMenu(string nama [], int harga[]) {
 
         cout << "\n=== MENU SESUAI ANGGARAN ===\n";
 
-        for (int i = 0; i < jumlahMenu; i++) {
+        for (int i = 0; i < JumlahMenu; i++) {
             if (harga[i] <= anggaran) {
 
                 cout << nama[i];
@@ -78,6 +78,27 @@ string nama [9] = {
     "Tempe Goreng",
     "Bubur Ayam",
     "Soto",
+    "Bakso",
+    "Ayam Bakar",
+    "Seblak",
+    "Pecel Lele",
+    "Mie Instan + Telur",
+    "Sayur Sop",
+    "Sayur Kangkung",
+    "Nasi Padang", 
+    "Sate Ayam",
+    "Orek Tempe",
+    "Nasi Bakar",
+    "Roti Bakar",
+    "Martabak Manis",
+    "Buah Potong",
+    "Susu",
+    "Mie Tek-tek",
+    "Risol",
+    "Rice Bowl",
+    "Takoyaki",
+
+
 };
 
 int harga [9] = {
@@ -90,6 +111,25 @@ int harga [9] = {
     4000,
     9000,
     11000,
+    12000,
+    20000,
+    15000,
+    15000,
+    7000,
+    5000,
+    5000,
+    10000,
+    15000,
+    5000,
+    13000,
+    12000,
+    15000,
+    5000,
+    7000,
+    14000,
+    3000,
+    15000,
+    10000,
 };
 
 int pilihan;
