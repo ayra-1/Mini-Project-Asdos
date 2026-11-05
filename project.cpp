@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int JumlahMenu = 0;
+int JumlahMenu = 28;
 
 void tampilkanMenu(string nama[], int harga[]) {
 
@@ -16,8 +16,8 @@ void tampilkanMenu(string nama[], int harga[]) {
 }  
 
 void bubbleSort(string nama[], int harga[]) {
-    for (int i = 0; i < JumlahMenu; i++) {
-        for (int j = 0; j < JumlahMenu - 1; j++) {
+    for (int i = 0; i < JumlahMenu - 1; i++) {
+        for (int j = 0; j < JumlahMenu - 1 - i; j++) {
             if (harga[j] > harga[j + 1]) {
                 
                 int sementara = harga[j];
@@ -68,7 +68,7 @@ void cariMenu(string nama [], int harga[]) {
 
 
 int main () {
-string nama [9] = {
+string nama [28] = {
     "Nasi Goreng",
     "Mie Ayam",
     "Telur Rebus",
@@ -97,11 +97,9 @@ string nama [9] = {
     "Risol",
     "Rice Bowl",
     "Takoyaki",
-
-
 };
 
-int harga [9] = {
+int harga [28] = {
     12000,
     10000,
     5000,
