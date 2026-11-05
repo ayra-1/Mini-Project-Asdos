@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int JumlahMenu = 16;
+int JumlahMenu = 0;
 
 void tampilkanMenu(string nama[], int harga[]) {
 
@@ -31,7 +31,7 @@ void bubbleSort(string nama[], int harga[]) {
             }
         }
     }
-} 
+}
 
 void cariMenu(string nama [], int harga[]) {
     
@@ -50,7 +50,7 @@ void cariMenu(string nama [], int harga[]) {
 
         cout << "\n=== MENU SESUAI ANGGARAN ===\n";
 
-        for (int i = 0; i < JumlahMenu; i++) {
+        for (int i = 0; i < jumlahMenu; i++) {
             if (harga[i] <= anggaran) {
 
                 cout << nama[i];
@@ -66,42 +66,61 @@ void cariMenu(string nama [], int harga[]) {
     }
 }
 
-int main () {
 
-    string nama[16] = {}
-    "Ayam Geprek",
-    "Mie ayam",
-    "Martabak Manis",
-    "Nasi Bakar",
+int main () {
+string nama [9] = {
     "Nasi Goreng",
-    "Ketoprak",
-    "Soto",
-    "Sate Ayam",
+    "Mie Ayam",
+    "Telur Rebus",
+    "Ayam Geprek",
     "Roti Bakar",
-    "Batagor",
-    "Bubur Kacang Ijo",
     "Nasi Uduk",
+    "Tempe Goreng",
     "Bubur Ayam",
-    "Susu",
-    "Buah",
-    "Nasi Bakar"
+    "Soto",
 };
 
-int harga[16] = {
-    10000,
-    10000,
-    40000,
-    10000,
+int harga [9] = {
     12000,
-    15000,
-    13000,
-    8000,
-    19000,
-    6000,
+    10000,
     5000,
+    15000,
+    8000,
     7000,
-    10000,
-    7000,
-    10000,
+    4000,
+    9000,
     11000,
 };
+
+int pilihan;
+
+do {
+
+    cout << "\n=== MENU UTAMA ===\n";
+    cout << "1. Tampilkan Daftar Menu\n";
+    cout << "2. Cari Menu Sesuai Anggaran\n";
+    cout << "3. Keluar\n";
+    cout << "Pilih menu: ";
+
+    cin >> pilihan;
+
+     switch (pilihan) {
+        case 1:
+                tampilkanMenu(nama, harga);
+                break;
+
+            case 2:
+                cariMenu(nama, harga);
+                break;
+
+            case 3:
+                cout << "Terima kasih!\n";
+                break;
+
+            default:
+                cout << "Pilihan tidak tersedia!\n";
+        }
+     } while (pilihan != 3);
+
+     return 0;
+}
