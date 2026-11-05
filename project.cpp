@@ -32,3 +32,36 @@ void bubbleSort(string nama[], int harga[]) {
         }
     }
 }
+
+void cariMenu(string nama [], int harga[]) {
+    
+    int anggaran;
+    int ditemukan = 0;
+
+    cout << "\nMasukkan anggaran kamu: Rp ";
+    cin >> anggaran;
+
+    if (anggaran <= 0) {
+        cout << "Anggaran tidak valid!\n";
+    }
+    else {
+
+        bubbleSort(nama, harga);
+
+        cout << "\n=== MENU SESUAI ANGGARAN ===\n";
+
+        for (int i = 0; i < jumlahMenu; i++) {
+            if (harga[i] <= anggaran) {
+
+                cout << nama[i];
+                cout << " - Rp " << harga[i] << endl;
+
+                ditemukan = 1;
+            }
+        }
+
+        if (ditemukan == 0) {
+            cout << "Tidak ada menu yang sesuai.\n";
+        }
+    }
+}
